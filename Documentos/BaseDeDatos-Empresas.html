@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Directorio de Contactos — Capital Federal</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0f0f13;
+    --surface: #17171d;
+    --surface2: #1e1e27;
+    --border: rgba(255,255,255,0.07);
+    --text: #f0eee8;
+    --muted: #7b7988;
+    --accent: #c9a96e;
+    --wa: #25D366;
+    --call: #ff5f5f;
+    --email: #5b9cf6;
+    --tag-bg: rgba(201,169,110,0.1);
+    --tag-color: #c9a96e;
+    --radius: 16px;
+    --shadow: 0 4px 32px rgba(0,0,0,0.4);
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 48px 24px;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  header h1 span {
+    color: var(--accent);
+  }
+
+  header p {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+    border-color: rgba(201,169,110,0.2);
+  }
+
+  .card-header {
+    padding: 22px 24px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .card-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+
+  .tipo-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--tag-color);
+    background: var(--tag-bg);
+    border: 1px solid rgba(201,169,110,0.2);
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+
+  .card-body {
+    padding: 16px 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--surface2);
+    border-radius: 10px;
+    padding: 10px 14px;
+    text-decoration: none;
+    transition: background 0.15s ease, transform 0.15s ease;
+    border: 1px solid transparent;
+  }
+
+  .contact-row:hover {
+    transform: translateX(3px);
+  }
+
+  .contact-row.call { border-color: rgba(255,95,95,0.15); }
+  .contact-row.call:hover { background: rgba(255,95,95,0.08); border-color: rgba(255,95,95,0.3); }
+
+  .contact-row.wa { border-color: rgba(37,211,102,0.15); }
+  .contact-row.wa:hover { background: rgba(37,211,102,0.08); border-color: rgba(37,211,102,0.3); }
+
+  .contact-row.mail { border-color: rgba(91,156,246,0.15); }
+  .contact-row.mail:hover { background: rgba(91,156,246,0.08); border-color: rgba(91,156,246,0.3); }
+
+  .icon-wrap {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .call .icon-wrap { background: rgba(255,95,95,0.15); }
+  .wa .icon-wrap   { background: rgba(37,211,102,0.15); }
+  .mail .icon-wrap { background: rgba(91,156,246,0.15); }
+
+  .contact-row svg { display: block; }
+
+  .contact-info { flex: 1; min-width: 0; }
+  .contact-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+  }
+  .call .contact-label  { color: var(--call); }
+  .wa .contact-label    { color: var(--wa); }
+  .mail .contact-label  { color: var(--email); }
+
+  .contact-value {
+    font-size: 0.82rem;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400;
+  }
+
+  .arrow {
+    color: var(--muted);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    transition: color 0.15s ease;
+  }
+  .contact-row:hover .arrow { color: var(--text); }
+
+  /* ─── PRINT STYLES ───────────────────────────────────── */
+  @media print {
+    /* Preservar todos los colores e imágenes de fondo exactamente */
+    *, *::before, *::after {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    body {
+      padding: 6mm !important;
+    }
+
+    body {
+      padding: 0;
+      background: var(--bg) !important;
+    }
+
+    header {
+      margin-bottom: 28px;
+    }
+
+    /* 2 columnas para aprovechar el A4 */
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      max-width: 100%;
+    }
+
+    /* Tarjetas que no se cortan entre páginas */
+    .card {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      overflow: visible;
+    }
+
+    /* Sin animaciones en PDF */
+    .card,
+    .contact-row {
+      transition: none !important;
+      transform: none !important;
+      box-shadow: none !important;
+    }
+
+    /* Emails y teléfonos largos que no se corten */
+    .contact-value {
+      white-space: normal;
+      overflow: visible;
+      text-overflow: clip;
+      word-break: break-all;
+    }
+
+    /* La flecha no aporta nada en PDF */
+    .arrow { display: none; }
+  }
+
+  /* Botón de descarga — solo visible en pantalla, no en PDF */
+  .download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 10px 22px;
+    background: var(--accent);
+    color: #0f0f13;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .download-btn:hover { opacity: 0.85; transform: translateY(-1px); }
+
+  @media print {
+    .download-btn { display: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Directorio <span>Capital Federal</span></h1>
+  <p>Hoteles · Transporte · Agencias · Cruceros</p>
+  <a class="download-btn" id="downloadBtn">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Descargar PDF
+  </a>
+</header>
+
+<div class="grid" id="grid"></div>
+
+<script>
+const contacts = [
+  {"empresa":"Alvear Palace Hotel","tipo":"Hotel","phone":"+54 11 4808-2179","tel_link":"tel:+541148082179","wa_link":"https://wa.me/541148082179","email":"reservas@alvear.com.ar"},
+  {"empresa":"Alvear Art Hotel","tipo":"Hotel","phone":"+54 11 4808-2179","tel_link":"tel:+541148082179","wa_link":"https://wa.me/541148082179","email":"gerencia@alvear.com.ar"},
+  {"empresa":"Alvear Icon Hotel & Residences","tipo":"Hotel","phone":"+54 11 4114-0900","tel_link":"tel:+541141140900","wa_link":"https://wa.me/541141140900","email":"reservationsicon@alvear.com.ar"},
+  {"empresa":"Faena Hotel Buenos Aires","tipo":"Hotel","phone":"+54 11 4010-9000","tel_link":"tel:+541140109000","wa_link":"https://wa.me/541140109000","email":"info@faenahotels.com"},
+  {"empresa":"Four Seasons Hotel Buenos Aires","tipo":"Hotel","phone":"+54 11 4321-1200","tel_link":"tel:+541143211200","wa_link":"https://wa.me/541143211200","email":"res.buenosaires@fourseasons.com"},
+  {"empresa":"Hilton Buenos Aires","tipo":"Hotel","phone":"+54 11 4891-0000","tel_link":"tel:+541148910000","wa_link":"https://wa.me/541148910000","email":"reservations.buenosaires@hilton.com"},
+  {"empresa":"InterContinental Buenos Aires","tipo":"Hotel","phone":"+54 11 4340-7100","tel_link":"tel:+541143407100","wa_link":"https://wa.me/541143407100","email":"bueha.reservas@ihg.com"},
+  {"empresa":"Palacio Duhau – Park Hyatt Buenos Aires","tipo":"Hotel","phone":"+54 11 5171-1234","tel_link":"tel:+541151711234","wa_link":"https://wa.me/541151711234","email":""},
+  {"empresa":"Palladio Hotel Buenos Aires – MGallery","tipo":"Hotel","phone":"+54 11 4700-7500","tel_link":"tel:+541147007500","wa_link":"https://wa.me/541147007500","email":"recepcion.palladio@accor.com"},
+  {"empresa":"SLS Puerto Madero","tipo":"Hotel","phone":"+54 11 5353-5354","tel_link":"tel:+541153535354","wa_link":"https://wa.me/541153535354","email":"reservations.puertomadero@slshotels.com"},
+  {"empresa":"CasaSur Recoleta Hotel","tipo":"Hotel","phone":"+54 11 4515-0085","tel_link":"tel:+541145150085","wa_link":"https://wa.me/541145150085","email":"reservas@casasurhotel.com"},
+  {"empresa":"Travelvans","tipo":"Transporte / Agencia","phone":"+54 11 4969-1561","tel_link":"tel:+541149691561","wa_link":"https://wa.me/541149691561","email":"info@travelvans.com.ar"},
+  {"empresa":"Cultour Buenos Aires","tipo":"Transporte / Agencia","phone":"+54 9 11 444 0290","tel_link":"tel:+549114440290","wa_link":"https://wa.me/549114440290","email":"info@cultourbuenosaires.com"},
+  {"empresa":"Signature Tours","tipo":"Agencia de Turismo","phone":"+54 9 11 4857-5956","tel_link":"tel:+5491148575956","wa_link":"https://wa.me/5491148575956","email":"info@signaturetours.com.ar"},
+  {"empresa":"Buenos Aires City Bus / Gray Line Argentina","tipo":"Agencia de Turismo / Bus Turístico","phone":"+54 11 5239-8206","tel_link":"tel:+541152398206","wa_link":"https://wa.me/541152398206","email":"online@graylineargentina.com"},
+  {"empresa":"Tangol Tours","tipo":"Agencia de Turismo / DMC","phone":"+54 9 11 5307-9090","tel_link":"tel:+5491153079090","wa_link":"https://wa.me/5491153079090","email":"desarrollos@tangol.com"},
+  {"empresa":"Argentina Travel Partners (ATP DMC)","tipo":"DMC / Operador Receptivo","phone":"","tel_link":"","wa_link":"","email":"mbegg@atpdmc.com"},
+  {"empresa":"Kallpa Tour Operator","tipo":"DMC / Operador Receptivo","phone":"","tel_link":"","wa_link":"","email":"gabriel@kallpatour.com"},
+  {"empresa":"Les Amis Viajes","tipo":"DMC / Operador Receptivo","phone":"","tel_link":"","wa_link":"","email":"cfeldman@lesamis.com.ar"},
+  {"empresa":"MSC Cruceros Argentina","tipo":"Crucero","phone":"+54 11 5256-3700","tel_link":"tel:+541152563700","wa_link":"https://wa.me/541152563700","email":"info@msccruceros.com.ar"},
+  {"empresa":"Norwegian Cruise Line (Vanguard Marketing)","tipo":"Crucero","phone":"+54 11 5353-0580","tel_link":"tel:+541153530580","wa_link":"https://wa.me/541153530580","email":"cruceros@vanguardmarketing.com.ar"},
+  {"empresa":"Royal Caribbean (Organfur S.A.)","tipo":"Crucero","phone":"0-800-888-27823","tel_link":"tel:080088827823","wa_link":"","email":"info@organfur.com.ar"}
+];
+
+const iconCall = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff5f5f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.49 2 2 0 0 1 3.57 1.29h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.27a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`;
+
+const iconWA = `<svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>`;
+
+const iconEmail = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5b9cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>`;
+
+const grid = document.getElementById('grid');
+
+contacts.forEach(c => {
+  const card = document.createElement('div');
+  card.className = 'card';
+
+  let rows = '';
+
+  if (c.phone) {
+    rows += `
+      <a class="contact-row call" href="${c.tel_link}">
+        <div class="icon-wrap">${iconCall}</div>
+        <div class="contact-info">
+          <div class="contact-label">Llamar</div>
+          <div class="contact-value">${c.phone}</div>
+        </div>
+        <span class="arrow">›</span>
+      </a>`;
+  }
+
+  if (c.wa_link) {
+    rows += `
+      <a class="contact-row wa" href="${c.wa_link}" target="_blank">
+        <div class="icon-wrap">${iconWA}</div>
+        <div class="contact-info">
+          <div class="contact-label">WhatsApp</div>
+          <div class="contact-value">${c.phone}</div>
+        </div>
+        <span class="arrow">›</span>
+      </a>`;
+  }
+
+  if (c.email) {
+    rows += `
+      <a class="contact-row mail" href="mailto:${c.email}">
+        <div class="icon-wrap">${iconEmail}</div>
+        <div class="contact-info">
+          <div class="contact-label">Email</div>
+          <div class="contact-value">${c.email}</div>
+        </div>
+        <span class="arrow">›</span>
+      </a>`;
+  }
+
+  card.innerHTML = `
+    <div class="card-header">
+      <h2>${c.empresa}</h2>
+      <span class="tipo-badge">${c.tipo}</span>
+    </div>
+    <div class="card-body">${rows}</div>
+  `;
+
+  grid.appendChild(card);
+});
+
+// Botón de descarga: genera el HTML como blob y lo descarga para abrir con visor nativo
+document.getElementById('downloadBtn').addEventListener('click', function() {
+  const html = document.documentElement.outerHTML;
+  const blob = new Blob([html], { type: 'text/html' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'Directorio-Capital-Federal.html';
+  a.click();
+  URL.revokeObjectURL(url);
+});
+</script>
+</body>
+</html>
