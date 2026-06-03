@@ -74,19 +74,19 @@ export const Location: React.FC = () => {
   
   // Custom Embed URL focusing on the specific coordinates and adding a label via 'q' parameter
   // Coordinates for Magdalena approximately
-  const mapsUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.9790436733!2d-57.5147!3d-35.0823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDA0JzU2LjMiUyA1N8KwMzAnNTIuOSJX!5e0!3m2!1ses!2sar!4v1717084800000!5m2!1ses!2sar&q=Día+de+Gaucho";
-  const externalMapsUrl = "https://maps.app.goo.gl/7KsZmy6AT9z9b31j8";
+  const mapsUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.8549432095033!2d-57.509581799999994!3d-35.085591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a26534501e5df3%3A0x2a3b4eedebda221!2sCENTRO%20TRADICIONALISTA%20LA%20TOTORA%20-%20MAGDALENA!5e0!3m2!1ses!2sar!4v1717084800000!5m2!1ses!2sar";
+  const externalMapsUrl = "https://www.google.com/maps/place/CENTRO+TRADICIONALISTA+LA+TOTORA+-+MAGDALENA/@-35.0855921,-57.5083641,16z";
 
   return (
     <LocationWrapper id="ubicacion">
-      <Title>{t('nav_location')}</Title>
+      <Title>{t('location_complex_title')}</Title>
       <MapContainer>
         <MapFrame 
           src={mapsUrl} 
           allowFullScreen={true} 
           loading="lazy" 
           referrerPolicy="no-referrer-when-downgrade"
-          title="Ubicación Día de Gaucho"
+          title="Ubicación Experiencia Gaucha Criolla"
         />
       </MapContainer>
       <MapsLink href={externalMapsUrl} target="_blank" rel="noopener noreferrer">

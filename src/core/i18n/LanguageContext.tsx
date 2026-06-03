@@ -17,13 +17,18 @@ const translations: TranslationDictionary = {
   
   // Hero
   hero_badge: { es: 'Magdalena, Buenos Aires', en: 'Magdalena, Buenos Aires' },
-  hero_title_1: { es: 'Viví un verdadero', en: 'Experience a true' },
-  hero_title_2: { es: 'Día de Gaucho', en: 'Gaucho Day' },
+  hero_title_1: { es: 'Viví una', en: 'Live a' },
+  hero_title_2: { es: 'experiencia criolla', en: 'cultural criollo' },
+  hero_title_3: { es: 'cultural en Magdalena', en: 'experience in Magdalena' },
   hero_desc: { 
-    es: 'Traslado desde Capital Federal, costillar al asador, caballos, folclore y contenido multimedia con Dron.', 
-    en: 'Round-trip from Buenos Aires, traditional barbecue, horseback riding, folklore, and drone multimedia content.' 
+    es: 'Traslado desde Capital Federal, costillar al asador, caballos, destreza gaucha y folclore.', 
+    en: 'Round-trip from Buenos Aires, traditional barbecue, horseback riding, gaucho skills and folklore.' 
   },
   hero_cta: { es: 'Asegurá tu lugar', en: 'Secure your spot' },
+  hero_cta_subtext: { 
+    es: 'Experimentá un día criollo en el campo argentino', 
+    en: 'Experience a traditional criollo day in the Argentine countryside' 
+  },
   
   // Services
   services_title: { es: '¿Qué incluye la jornada?', en: 'What is included?' },
@@ -48,6 +53,7 @@ const translations: TranslationDictionary = {
   },
 
   // Multimedia
+  carousel_title: { es: 'La jornada en imágenes', en: 'The day in pictures' },
   multimedia_title: { es: 'Tus recuerdos, desde el aire.', en: 'Your memories, from above.' },
   multimedia_text: { 
     es: 'Sabemos que es una experiencia única. Por eso, documentamos tu día con calidad cinematográfica para que te quede de recuerdo para siempre.',
@@ -61,13 +67,14 @@ const translations: TranslationDictionary = {
   multimedia_visual_subtitle: { es: 'Material en alta calidad directo a tu Google Drive, ideal para redes sociales.', en: 'High-quality material direct to your Google Drive, ideal for social media.' },
 
   // Location
+  location_complex_title: { es: 'Vas a pasar tu día en el Centro Tradicionalista "La Totora"', en: 'You will spend your day at the "La Totora" Traditional Center' },
   location_cta: { es: 'Abrir en Google Maps', en: 'Open in Google Maps' },
 
   // Pricing
   pricing_title: { es: 'Asegurá tu experiencia', en: 'Secure your experience' },
   pricing_subtitle: { es: 'Un servicio All-Inclusive desde el transporte hasta el material multimedia final.', en: 'All-inclusive service from transport to the final multimedia material.' },
   pricing_badge: { es: 'Paquete Único', en: 'Single Package' },
-  pricing_card_title: { es: 'Día de Gaucho', en: 'Gaucho Day' },
+  pricing_card_title: { es: 'Experiencia Gaucha Criolla', en: 'Experiencia Gaucha Criolla' },
   pricing_feature_1: { es: 'Traslado CABA - Magdalena ida y vuelta.', en: 'Round-trip CABA - Magdalena transfer.' },
   pricing_feature_2: { es: 'Almuerzo libre: Costillar y bebidas.', en: 'Open lunch: Traditional BBQ and drinks.' },
   pricing_feature_3: { es: 'Cabalgatas, baile, historia y vestimenta.', en: 'Horseback riding, dance, history, and attire.' },
@@ -81,7 +88,29 @@ const translations: TranslationDictionary = {
   cta_roots: { es: 'No dejes pasar la oportunidad de conectar con tus raíces.', en: 'Don\'t miss the opportunity to connect with your roots.' },
   cta_magic: { es: 'Viví la verdadera magia del campo argentino.', en: 'Experience the true magic of the Argentine countryside.' },
   cta_history: { es: 'Tu lugar en la historia te espera.', en: 'Your place in history awaits you.' },
-  cta_join_us: { es: 'Un día inolvidable te está esperando, ¿te sumás?', en: 'An unforgettable day is waiting for you, will you join us?' }
+  cta_join_us: { es: 'Un día inolvidable te está esperando, ¿te sumás?', en: 'An unforgettable day is waiting for you, will you join us?' },
+
+  // Reviews
+  reviews_title: { es: 'Voces de nuestra tierra', en: 'Voices from our land' },
+  review_1_text: { es: '"Una experiencia única. El costillar al asador fue lo mejor que probé en mi vida y la cabalgata al atardecer no tiene precio."', en: '"A unique experience. The barbecue was the best I\'ve ever had and the sunset ride is priceless."' },
+  review_1_author: { es: 'Juan Manuel - Buenos Aires', en: 'Juan Manuel - Buenos Aires' },
+  review_2_text: { es: '"Llevamos a unos amigos del exterior y quedaron fascinados. La atención de los gauchos y el show de folclore son de primer nivel."', en: '"We took some friends from abroad and they were fascinated. The gauchos\' attention and the folklore show are top-notch."' },
+  review_2_author: { es: 'Elena R. - Emprendedora', en: 'Elena R. - Entrepreneur' },
+  review_3_text: { es: '"Lo que más me gustó fue el material del dron. Tener un video profesional de nosotros cabalgando es un recuerdo para siempre."', en: '"What I liked most was the drone footage. Having a professional video of us riding is a memory for a lifetime."' },
+  review_3_author: { es: 'Ricardo G. - Turista', en: 'Ricardo G. - Tourist' },
+
+  // FAQ
+  faq_title: { es: 'Preguntas Frecuentes', en: 'Frequently Asked Questions' },
+  faq_q1: { es: '¿Qué pasa si llueve?', en: 'What happens if it rains?' },
+  faq_a1: { es: 'La actividad se reprograma sin costo. Te avisaremos con 24hs de antelación para coordinar una nueva fecha.', en: 'The activity is rescheduled at no cost. We will notify you 24 hours in advance to coordinate a new date.' },
+  faq_q2: { es: '¿Tienen opciones para celíacos o vegetarianos?', en: 'Do you have celiac or vegetarian options?' },
+  faq_a2: { es: '¡Sí! Al momento de reservar, informanos tus restricciones alimentarias y prepararemos un menú especial para vos.', en: 'Yes! When booking, let us know your dietary restrictions and we will prepare a special menu for you.' },
+  faq_q3: { es: '¿Es apto para niños?', en: 'Is it suitable for children?' },
+  faq_a3: { es: 'Totalmente. Es una experiencia familiar ideal. Los menores de 12 años tienen un descuento especial.', en: 'Absolutely. It is an ideal family experience. Children under 12 have a special discount.' },
+  faq_q4: { es: '¿Cómo se llega desde Capital Federal?', en: 'How do I get there from Buenos Aires?' },
+  faq_a4: { es: 'Contamos con traslados privados que salen desde puntos estratégicos de CABA (Palermo y Centro) incluidos en el paquete.', en: 'We have private transfers leaving from strategic points in Buenos Aires (Palermo and Downtown) included in the package.' },
+  faq_q5: { es: '¿Necesito experiencia previa con caballos?', en: 'Do I need previous experience with horses?' },
+  faq_a5: { es: 'No es necesario. Nuestros caballos son mansos y estarás acompañado por guías expertos en todo momento.', en: 'Not necessary. Our horses are gentle and you will be accompanied by expert guides at all times.' },
 };
 
 interface LanguageContextType {

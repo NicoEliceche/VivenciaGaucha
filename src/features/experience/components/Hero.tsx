@@ -52,18 +52,18 @@ const LocationBadge = styled.span`
 
 const Title = styled.h1`
   font-family: ${({ theme }) => theme.typography.fontFamily.title};
-  font-size: ${({ theme }) => theme.typography.size['4xl']};
+  font-size: ${({ theme }) => theme.typography.size['3xl']};
   color: ${({ theme }) => theme.color.textInverse};
   margin-bottom: ${({ theme }) => theme.spacing[6]};
   line-height: 1.1;
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-    font-size: ${({ theme }) => theme.typography.size['5xl']};
+    font-size: ${({ theme }) => theme.typography.size['4xl']};
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    font-size: ${({ theme }) => theme.typography.size['7xl']};
+    font-size: ${({ theme }) => theme.typography.size['6xl']};
   }
 `;
 
@@ -113,6 +113,22 @@ const HeroButton = styled.a`
   }
 `;
 
+const HeroSubtext = styled.p`
+  font-family: ${({ theme }) => theme.typography.fontFamily.title};
+  font-size: ${({ theme }) => theme.typography.size['2xl']};
+  color: ${({ theme }) => theme.color.textInverse};
+  margin-top: ${({ theme }) => theme.spacing[6]};
+  font-weight: ${({ theme }) => theme.typography.weight.semibold};
+  max-width: 42rem;
+  line-height: ${({ theme }) => theme.typography.lineHeight.tight};
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    font-size: ${({ theme }) => theme.typography.size['4xl']};
+    margin-top: ${({ theme }) => theme.spacing[8]};
+  }
+`;
+
 export const Hero: React.FC = () => {
   const { t } = useLanguage();
   
@@ -120,11 +136,16 @@ export const Hero: React.FC = () => {
     <HeroWrapper>
       <HeroContent>
         <LocationBadge>{t('hero_badge')}</LocationBadge>
-        <Title>{t('hero_title_1')} <br /> {t('hero_title_2')}</Title>
+        <Title>
+          {t('hero_title_1')} <br /> 
+          {t('hero_title_2')} <br /> 
+          {t('hero_title_3')}
+        </Title>
         <Description>
           {t('hero_desc')}
         </Description>
         <HeroButton href="#reserva">{t('hero_cta')}</HeroButton>
+        <HeroSubtext>{t('hero_cta_subtext')}</HeroSubtext>
       </HeroContent>
     </HeroWrapper>
   );

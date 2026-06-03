@@ -36,7 +36,7 @@ const BrandName = styled.span`
 
 export const MainLogo: React.FC = () => (
   <LogoWrapper>
-    <LogoImage src={logoImg} alt="Día de Gaucho Logo" />
-    <BrandName>Día de Gaucho</BrandName>
+    <LogoImage src={logoImg} alt="Experiencia Gaucha Criolla Logo" />
+    <BrandName>Experiencia Gaucha Criolla</BrandName>
   </LogoWrapper>
 );

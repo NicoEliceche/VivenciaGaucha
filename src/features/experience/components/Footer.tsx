@@ -83,7 +83,7 @@ export const Footer: React.FC = () => (
       <MainLogo />
     </LogoContainer>
     <Copyright>
-      &copy; {new Date().getFullYear()} Día de Gaucho. Magdalena, Buenos Aires, Argentina.
+      &copy; {new Date().getFullYear()} Experiencia Gaucha Criolla. Magdalena, Buenos Aires, Argentina.
     </Copyright>
   </FooterWrapper>
 );
