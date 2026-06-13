@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useLanguage } from '../../../core/i18n/LanguageContext';
-import boinaImg from '../../../../frontend/assets/boina.jpg';
+import mateImg from '../../../../frontend/assets/mate.png';
 
 const PricingWrapper = styled.section`
   padding: ${({ theme }) => `${theme.spacing[20]} ${theme.spacing[4]}`};
@@ -74,14 +74,27 @@ const Badge = styled.div`
 
 const CardTitle = styled.h3`
   font-family: ${({ theme }) => theme.typography.fontFamily.title};
-  font-size: ${({ theme }) => theme.typography.size['2xl']};
+  font-size: ${({ theme }) => theme.typography.size.xl};
+  line-height: ${({ theme }) => theme.typography.lineHeight.snug};
   color: ${({ theme }) => theme.color.primary};
   margin-top: ${({ theme }) => theme.spacing[2]};
+  margin-bottom: ${({ theme }) => theme.spacing[1]};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    font-size: ${({ theme }) => theme.typography.size['2xl']};
+    margin-top: ${({ theme }) => theme.spacing[4]};
+  }
+`;
+
+const CardVenue = styled.p`
+  font-family: ${({ theme }) => theme.typography.fontFamily.title};
+  font-size: ${({ theme }) => theme.typography.size.lg};
+  line-height: ${({ theme }) => theme.typography.lineHeight.snug};
+  color: ${({ theme }) => theme.color.primaryLight};
   margin-bottom: ${({ theme }) => theme.spacing[2]};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    font-size: ${({ theme }) => theme.typography.size['3xl']};
-    margin-top: ${({ theme }) => theme.spacing[4]};
+    font-size: ${({ theme }) => theme.typography.size['2xlMinus2']};
   }
 `;
 
@@ -132,10 +145,11 @@ const FeatureItem = styled.li`
   gap: ${({ theme }) => theme.spacing[4]};
 `;
 
-const BoinaBullet = styled.img`
+const MateBullet = styled.img`
   width: 32px;
   height: 32px;
   object-fit: cover;
+  object-position: center;
   border-radius: 50%;
   flex-shrink: 0;
   border: 2px solid ${({ theme }) => theme.color.leather};
@@ -184,23 +198,24 @@ export const Pricing: React.FC = () => {
       <PriceCard>
         <Badge>{t('pricing_badge')}</Badge>
         <CardTitle>{t('pricing_card_title')}</CardTitle>
+        <CardVenue>{t('pricing_card_venue')}</CardVenue>
         <Price>$250 <Currency>USD</Currency></Price>
         
         <FeatureList>
           <FeatureItem>
-            <BoinaBullet src={boinaImg} alt="Bullet boina" /> 
+            <MateBullet src={mateImg} alt="Mate argentino" />
             <span>{t('pricing_feature_1')}</span>
           </FeatureItem>
           <FeatureItem>
-            <BoinaBullet src={boinaImg} alt="Bullet boina" /> 
+            <MateBullet src={mateImg} alt="Mate argentino" />
             <span>{t('pricing_feature_2')}</span>
           </FeatureItem>
           <FeatureItem>
-            <BoinaBullet src={boinaImg} alt="Bullet boina" /> 
+            <MateBullet src={mateImg} alt="Mate argentino" />
             <span>{t('pricing_feature_3')}</span>
           </FeatureItem>
           <FeatureItem>
-            <BoinaBullet src={boinaImg} alt="Bullet boina" /> 
+            <MateBullet src={mateImg} alt="Mate argentino" />
             <span>{t('pricing_feature_4')}</span>
           </FeatureItem>
         </FeatureList>

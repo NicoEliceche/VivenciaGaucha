@@ -6,7 +6,6 @@ import { Multimedia } from '../components/Multimedia';
 import { Reviews } from '../components/Reviews';
 import { Location } from '../components/Location';
 import { Pricing } from '../components/Pricing';
-import { Carousel } from '../components/Carousel';
 import { FAQ } from '../components/FAQ';
 import { SectionCTA } from '../components/SectionCTA';
 import { Footer } from '../components/Footer';
@@ -27,7 +26,6 @@ export const ExperienceScreen: React.FC = () => {
         <Location />
         <SectionCTA titleKey="cta_magic" />
         <Pricing />
-        <Carousel />
         <FAQ />
         <SectionCTA titleKey="cta_join_us" />
       </MainContent>

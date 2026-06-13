@@ -50,12 +50,14 @@ export const tokens = {
       sans: "'Inter', sans-serif",
     },
     size: {
+      xxs:   '0.625rem',
       xs:    '0.6875rem',
       sm:    '0.8125rem',
       base:  '1rem',
       lg:    '1.125rem',
       xl:    '1.25rem',
       '2xl': '1.5rem',
+      '2xlMinus2': '1.375rem',
       '3xl': '1.875rem',
       '4xl': '2.25rem',
       '5xl': '3rem',
@@ -107,6 +109,7 @@ export const tokens = {
   },
 
   breakpoints: {
+    xs:  '340px',
     sm:  '480px',
     md:  '768px',
     lg:  '1024px',

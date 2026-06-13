@@ -32,7 +32,7 @@ const translations: TranslationDictionary = {
   
   // Services
   services_title: { es: '¿Qué incluye la jornada?', en: 'What is included?' },
-  services_subtitle: { es: 'Una experiencia inmersiva de principio a fin.', en: 'An immersive experience from start to finish.' },
+  services_subtitle: { es: 'Una experiencia inmersiva de principio a fin. Mimetizate con el verdadero gaucho argentino tradicional.', en: 'An immersive experience from start to finish. Immerse yourself in the life of a true traditional Argentine gaucho.' },
   
   service_tradition_title: { es: 'Historia y Tradición', en: 'History & Tradition' },
   service_tradition_desc: { 
@@ -53,7 +53,6 @@ const translations: TranslationDictionary = {
   },
 
   // Multimedia
-  carousel_title: { es: 'La jornada en imágenes', en: 'The day in pictures' },
   multimedia_title: { es: 'Tus recuerdos, desde el aire.', en: 'Your memories, from above.' },
   multimedia_text: { 
     es: 'Sabemos que es una experiencia única. Por eso, documentamos tu día con calidad cinematográfica para que te quede de recuerdo para siempre.',
@@ -67,14 +66,16 @@ const translations: TranslationDictionary = {
   multimedia_visual_subtitle: { es: 'Material en alta calidad directo a tu Google Drive, ideal para redes sociales.', en: 'High-quality material direct to your Google Drive, ideal for social media.' },
 
   // Location
-  location_complex_title: { es: 'Vas a pasar tu día en el Centro Tradicionalista "La Totora"', en: 'You will spend your day at the "La Totora" Traditional Center' },
+  location_title_intro: { es: 'Vas a pasar tu día en la', en: 'You will spend your day at' },
+  location_title_place: { es: '"Asociación Tradicionalista Gauchos de Magdalena"', en: '"Asociación Tradicionalista Gauchos de Magdalena"' },
   location_cta: { es: 'Abrir en Google Maps', en: 'Open in Google Maps' },
 
   // Pricing
   pricing_title: { es: 'Asegurá tu experiencia', en: 'Secure your experience' },
   pricing_subtitle: { es: 'Un servicio All-Inclusive desde el transporte hasta el material multimedia final.', en: 'All-inclusive service from transport to the final multimedia material.' },
   pricing_badge: { es: 'Paquete Único', en: 'Single Package' },
-  pricing_card_title: { es: 'Experiencia Gaucha Criolla', en: 'Experiencia Gaucha Criolla' },
+  pricing_card_title: { es: 'Experiencia Gaucha Criolla', en: 'Gaucho Criollo Experience' },
+  pricing_card_venue: { es: 'Asociación Tradicionalista Gauchos de Magdalena', en: 'Asociación Tradicionalista Gauchos de Magdalena' },
   pricing_feature_1: { es: 'Traslado CABA - Magdalena ida y vuelta.', en: 'Round-trip CABA - Magdalena transfer.' },
   pricing_feature_2: { es: 'Almuerzo libre: Costillar y bebidas.', en: 'Open lunch: Traditional BBQ and drinks.' },
   pricing_feature_3: { es: 'Cabalgatas, baile, historia y vestimenta.', en: 'Horseback riding, dance, history, and attire.' },

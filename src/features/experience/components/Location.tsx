@@ -20,11 +20,24 @@ const LocationWrapper = styled.section`
 const Title = styled.h2`
   font-family: ${({ theme }) => theme.typography.fontFamily.title};
   font-size: ${({ theme }) => theme.typography.size['3xl']};
+  line-height: ${({ theme }) => theme.typography.lineHeight.snug};
   color: ${({ theme }) => theme.color.primary};
   margin-bottom: ${({ theme }) => theme.spacing[6]};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: ${({ theme }) => theme.typography.size['5xl']};
+  }
+`;
+
+const TitleLine = styled.span`
+  display: block;
+`;
+
+const TitleIntro = styled(TitleLine)`
+  font-size: ${({ theme }) => theme.typography.size['2xl']};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    font-size: inherit;
   }
 `;
 
@@ -71,22 +84,23 @@ const MapsLink = styled.a`
 
 export const Location: React.FC = () => {
   const { t } = useLanguage();
-  
-  // Custom Embed URL focusing on the specific coordinates and adding a label via 'q' parameter
-  // Coordinates for Magdalena approximately
-  const mapsUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.8549432095033!2d-57.509581799999994!3d-35.085591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a26534501e5df3%3A0x2a3b4eedebda221!2sCENTRO%20TRADICIONALISTA%20LA%20TOTORA%20-%20MAGDALENA!5e0!3m2!1ses!2sar!4v1717084800000!5m2!1ses!2sar";
-  const externalMapsUrl = "https://www.google.com/maps/place/CENTRO+TRADICIONALISTA+LA+TOTORA+-+MAGDALENA/@-35.0855921,-57.5083641,16z";
+
+  const mapsUrl = "https://www.google.com/maps?q=Asociaci%C3%B3n%20Tradicionalista%20Gauchos%20de%20Magdalena%2C%20-35.0868873%2C%20-57.5054844&z=17&output=embed";
+  const externalMapsUrl = "https://www.google.com/maps/place/Asociaci%C3%B3n+Tradicionalista+Gauchos+de+Magdalena/@-35.0868829,-57.5080593,17z/data=!4m14!1m7!3m6!1s0x95a265816e5a0717:0x80227442925809df!2sAsociaci%C3%B3n+Tradicionalista+Gauchos+de+Magdalena!8m2!3d-35.0868873!4d-57.5054844!16s%2Fg%2F11qzxc2c0s!3m5!1s0x95a265816e5a0717:0x80227442925809df!8m2!3d-35.0868873!4d-57.5054844!16s%2Fg%2F11qzxc2c0s?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D";
 
   return (
     <LocationWrapper id="ubicacion">
-      <Title>{t('location_complex_title')}</Title>
+      <Title>
+        <TitleIntro>{t('location_title_intro')}</TitleIntro>
+        <TitleLine>{t('location_title_place')}</TitleLine>
+      </Title>
       <MapContainer>
         <MapFrame 
           src={mapsUrl} 
           allowFullScreen={true} 
           loading="lazy" 
           referrerPolicy="no-referrer-when-downgrade"
-          title="Ubicación Experiencia Gaucha Criolla"
+          title="Ubicación Asociación Tradicionalista Gauchos de Magdalena"
         />
       </MapContainer>
       <MapsLink href={externalMapsUrl} target="_blank" rel="noopener noreferrer">

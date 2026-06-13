@@ -18,11 +18,17 @@ const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: ${({ theme }) => `${theme.spacing[3]} ${theme.spacing[4]}`};
+  gap: ${({ theme }) => theme.spacing[2]};
+  padding: ${({ theme }) => `${theme.spacing[2]} ${theme.spacing[2]}`};
   max-width: ${({ theme }) => theme.layout.maxContentWidth};
   margin: 0 auto;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    gap: ${({ theme }) => theme.spacing[2]};
+    padding: ${({ theme }) => `${theme.spacing[3]} ${theme.spacing[6]}`};
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
     padding: ${({ theme }) => `${theme.spacing[4]} ${theme.spacing[12]}`};
   }
 `;
@@ -30,23 +36,29 @@ const NavContainer = styled.div`
 const NavActions = styled.div`
   display: flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing[4]};
+  gap: ${({ theme }) => theme.spacing[1]};
+  flex-shrink: 0;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    gap: ${({ theme }) => theme.spacing[2]};
+  }
 `;
 
 const LanguageToggle = styled.button`
-  background: ${({ theme }) => theme.color.surface};
-  border: 1px solid ${({ theme }) => theme.color.border};
-  color: ${({ theme }) => theme.color.primary};
-  padding: ${({ theme }) => `${theme.spacing[1]} ${theme.spacing[3]}`};
-  border-radius: ${({ theme }) => theme.radius.full};
-  font-weight: ${({ theme }) => theme.typography.weight.bold};
-  font-size: ${({ theme }) => theme.typography.size.xs};
-  cursor: pointer;
-  transition: all 0.2s ease;
-  min-width: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: ${({ theme }) => theme.color.surface};
+  border: 1px solid ${({ theme }) => theme.color.border};
+  color: ${({ theme }) => theme.color.primary};
+  min-width: ${({ theme }) => theme.spacing[10]};
+  min-height: calc(${({ theme }) => theme.spacing[8]} - ${({ theme }) => theme.spacing[1]});
+  padding: ${({ theme }) => `${theme.spacing[1]} ${theme.spacing[2]}`};
+  border-radius: ${({ theme }) => theme.radius.md};
+  font-weight: ${({ theme }) => theme.typography.weight.bold};
+  font-size: ${({ theme }) => theme.typography.size.sm};
+  cursor: pointer;
+  transition: all 0.2s ease;
   white-space: nowrap;
 
   &:hover {
@@ -55,9 +67,23 @@ const LanguageToggle = styled.button`
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    padding: ${({ theme }) => `${theme.spacing[2]} ${theme.spacing[4]}`};
+    display: flex;
+    padding: ${({ theme }) => `${theme.spacing[2]} ${theme.spacing[3]}`};
     font-size: ${({ theme }) => theme.typography.size.sm};
-    min-width: 160px;
+  }
+`;
+
+const MobileLanguageLabel = styled.span`
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    display: none;
+  }
+`;
+
+const DesktopLanguageLabel = styled.span`
+  display: none;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    display: inline;
   }
 `;
 
@@ -71,8 +97,9 @@ const MenuButton = styled.button`
   border: none;
   color: ${({ theme }) => theme.color.primary};
   cursor: pointer;
+  margin-right: ${({ theme }) => theme.spacing[1]};
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     display: none;
   }
 `;
@@ -80,11 +107,15 @@ const MenuButton = styled.button`
 const DesktopNav = styled.nav`
   display: none;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     display: flex;
-    gap: ${({ theme }) => theme.spacing[8]};
+    gap: ${({ theme }) => theme.spacing[4]};
     align-items: center;
     font-weight: ${({ theme }) => theme.typography.weight.semibold};
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+    gap: ${({ theme }) => theme.spacing[6]};
   }
 `;
 
@@ -92,6 +123,7 @@ const NavLink = styled.a`
   text-decoration: none;
   color: ${({ theme }) => theme.color.primaryLight};
   transition: color 0.3s ease;
+  white-space: nowrap;
 
   &:hover {
     color: ${({ theme }) => theme.color.leather};
@@ -102,13 +134,18 @@ const ReserveButton = styled.a`
   text-decoration: none;
   background-color: ${({ theme }) => theme.color.leather};
   color: ${({ theme }) => theme.color.textInverse};
-  padding: ${({ theme }) => `${theme.spacing[2]} ${theme.spacing[6]}`};
+  padding: ${({ theme }) => `${theme.spacing[2]} ${theme.spacing[4]}`};
   border-radius: ${({ theme }) => theme.radius.md};
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
 
   &:hover {
     background-color: ${({ theme }) => theme.color.primary};
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+    padding: ${({ theme }) => `${theme.spacing[2]} ${theme.spacing[6]}`};
   }
 `;
 
@@ -124,7 +161,7 @@ const MobileMenu = styled.div<{ $isOpen: boolean }>`
   padding: ${({ $isOpen, theme }) => ($isOpen ? `${theme.spacing[6]} 0` : '0')};
   opacity: ${({ $isOpen }) => ($isOpen ? '1' : '0')};
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     display: none;
   }
 `;
@@ -166,7 +203,10 @@ export const Header: React.FC = () => {
         
         <NavActions>
           <LanguageToggle onClick={toggleLanguage} aria-label="Cambiar idioma">
-            {language === 'es' ? 'INGLÉS / ENGLISH' : 'ESPAÑOL / SPANISH'}
+            <MobileLanguageLabel>{language === 'es' ? 'EN' : 'ES'}</MobileLanguageLabel>
+            <DesktopLanguageLabel>
+              {language === 'es' ? 'INGLÉS / ENGLISH' : 'ESPAÑOL / SPANISH'}
+            </DesktopLanguageLabel>
           </LanguageToggle>
 
           <MenuButton onClick={() => setIsOpen(!isOpen)} aria-label="Abrir menú">
