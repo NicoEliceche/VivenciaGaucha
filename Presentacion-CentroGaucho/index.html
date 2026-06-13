@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Presentación operativa Día de Gaucho para el Centro Gaucho asociado." />
+    <title>Día de Gaucho | Presentación Centro Gaucho</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <svg class="svg-sprite" aria-hidden="true">
+      <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3.5 2" /></symbol>
+      <symbol id="icon-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3" /><path d="M3 20v-2a6 6 0 0 1 12 0v2M16 5.5a3 3 0 0 1 0 5.8M17 14a5 5 0 0 1 4 4.9V20" /></symbol>
+      <symbol id="icon-camera" viewBox="0 0 24 24"><path d="M4 7h4l1.5-2h5L16 7h4v12H4Z" /><circle cx="12" cy="13" r="4" /></symbol>
+      <symbol id="icon-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" /></symbol>
+      <symbol id="icon-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9Z" /></symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+    </svg>
+
+    <div class="screen-toolbar">
+      <div>
+        <span class="toolbar-logo"><img src="./assets/logo-dia-de-gaucho.png" alt="" /></span>
+        <span><b>Presentación Centro Gaucho</b><small>A4 vertical · 5 páginas</small></span>
+      </div>
+      <button type="button" data-print>Exportar PDF <svg><use href="#icon-arrow"></use></svg></button>
+    </div>
+
+    <main class="document">
+      <section class="page cover" id="portada">
+        <div class="page-bg page-bg--cover"></div>
+        <div class="cover__veil"></div>
+        <div class="cover__content">
+          <p class="kicker kicker--light">Propuesta operativa · Centro Gaucho asociado</p>
+          <div class="cover__logo-wrap">
+            <img class="cover__logo" src="./assets/logo-dia-de-gaucho.png" alt="Día de Gaucho, Experiencia en Magdalena" />
+          </div>
+          <h1>Experiencia Criolla<br /><em>Día de Gaucho</em></h1>
+          <p class="cover__lead">
+            Una experiencia personalizada e inolvidable para recibir visitantes y compartir con ellos
+            la tradición gaucha de Magdalena.
+          </p>
+          <div class="cover__facts">
+            <div><svg><use href="#icon-clock"></use></svg><b>6 horas</b><span>Experiencia en el Centro Gaucho</span></div>
+            <div><svg><use href="#icon-people"></use></svg><b>Atención personalizada</b><span>Recepción, actividades y despedida</span></div>
+            <div><svg><use href="#icon-globe"></use></svg><b>Acompañamiento bilingüe</b><span>Español e inglés</span></div>
+          </div>
+        </div>
+        <footer class="page-footer page-footer--light"><span>Documento de trabajo para Centro Gaucho asociado</span><b>01</b></footer>
+      </section>
+
+      <section class="page" id="resumen">
+        <div class="page-bg page-bg--tradition"></div>
+        <div class="sheet">
+          <header class="page-head">
+            <div>
+              <p class="kicker">La propuesta</p>
+              <h2>Una experiencia criolla con gauchos personalizada inolvidable.</h2>
+            </div>
+            <span class="chapter">Visión general</span>
+          </header>
+          <p class="intro">
+            Durante seis horas, el Centro Gaucho recibe al grupo, organiza cada actividad y acompaña a los
+            visitantes desde la bienvenida hasta la despedida.
+          </p>
+          <div class="summary-grid summary-grid--two">
+            <article>
+              <span>01</span><svg><use href="#icon-people"></use></svg>
+              <h3>Experiencia participativa</h3>
+              <p>Los visitantes se visten de gaucho, comparten actividades criollas, gastronomía y folklore.</p>
+            </article>
+            <article>
+              <span>02</span><svg><use href="#icon-camera"></use></svg>
+              <h3>Recuerdo incluido</h3>
+              <p>La jornada se registra con fotografías y videos para conservar y compartir la experiencia.</p>
+            </article>
+          </div>
+          <div class="center-focus">
+            <p class="kicker">El rol del Centro Gaucho</p>
+            <h3>Recibir, atender, organizar y despedir al grupo.</h3>
+            <p>La hospitalidad, el conocimiento y la coordinación del equipo local son el corazón de la experiencia.</p>
+          </div>
+        </div>
+        <footer class="page-footer"><span>Experiencia personalizada · Operación local</span><b>02</b></footer>
+      </section>
+
+      <section class="page" id="actividades">
+        <div class="page-bg page-bg--tradition"></div>
+        <div class="sheet">
+          <header class="page-head">
+            <div>
+              <p class="kicker">Jornada propuesta</p>
+              <h2>Siete momentos para vivir un día de gaucho.</h2>
+            </div>
+            <span class="chapter">10:00–16:00</span>
+          </header>
+          <div class="activity-grid">
+            <article><time>10:00</time><span>01</span><h3>Recepción criolla</h3><p>Bienvenida, mate, presentación del lugar y del equipo anfitrión.</p></article>
+            <article><time>10:30</time><span>02</span><h3>Vestirse de gaucho</h3><p>Entrega de prendas tradicionales y ayuda para caracterizarse.</p></article>
+            <article><time>11:00</time><span>03</span><h3>Foto a caballo</h3><p>Subir al caballo, caminar unos pasos y realizar retratos seguros.</p></article>
+            <article><time>12:00</time><span>04</span><h3>Carrera de sortijas</h3><p>Demostración de la destreza y explicación de su tradición.</p></article>
+            <article><time>13:00</time><span>05</span><h3>Asado criollo</h3><p>Almuerzo tradicional, atención de la mesa y sobremesa.</p></article>
+            <article><time>14:30</time><span>06</span><h3>Folklore</h3><p>Música, baile y participación para celebrar la cultura local.</p></article>
+            <article class="activity-grid__wide"><time>15:30</time><span>07</span><h3>Contenido multimedia y despedida</h3><p>Últimas fotos y videos, retrato grupal, cierre de la experiencia y despedida de los visitantes.</p></article>
+          </div>
+        </div>
+        <footer class="page-footer"><span>Recepción · Actividades · Asado · Folklore · Despedida</span><b>03</b></footer>
+      </section>
+
+      <section class="page" id="caballo">
+        <div class="page-bg page-bg--horse"></div>
+        <div class="sheet">
+          <header class="page-head">
+            <div>
+              <p class="kicker">Actividad a caballo</p>
+              <h2>Una foto gaucha segura, breve y controlada.</h2>
+            </div>
+            <span class="chapter">11:00</span>
+          </header>
+          <div class="photo-frame photo-frame--horse"><span>Retrato vestido de gaucho</span></div>
+          <p class="horse-intro">
+            La propuesta no contempla una cabalgata ni un recorrido libre. La persona sube al caballo con ayuda,
+            avanza unos pocos pasos acompañada y realiza su sesión de fotos.
+          </p>
+          <div class="horse-steps">
+            <article><b>01</b><h3>Preparar</h3><p>Caballo tranquilo, espacio controlado y personal responsable presente.</p></article>
+            <article><b>02</b><h3>Subir y caminar</h3><p>Asistencia para montar y movimiento breve, siempre acompañado.</p></article>
+            <article><b>03</b><h3>Fotografiar y bajar</h3><p>Retratos individuales, descenso asistido y cierre de la actividad.</p></article>
+          </div>
+          <aside class="safety-note">
+            <b>Seguridad primero</b>
+            <p>El Centro Gaucho define el caballo, el personal, el espacio y las condiciones necesarias para realizar la actividad.</p>
+          </aside>
+        </div>
+        <footer class="page-footer"><span>Subir · Caminar unos pasos · Fotografiar · Bajar</span><b>04</b></footer>
+      </section>
+
+      <section class="page closing" id="cierre">
+        <div class="page-bg page-bg--cover"></div>
+        <div class="closing__sheet">
+          <div class="closing-logo-wrap"><img src="./assets/logo-dia-de-gaucho.png" alt="Día de Gaucho, Experiencia en Magdalena" /></div>
+          <p class="kicker kicker--light">Definiciones operativas</p>
+          <h2>Construir y probar juntos la primera jornada.</h2>
+          <p class="closing__lead">Para organizar la experiencia necesitamos definir con el Centro Gaucho:</p>
+          <div class="decisions">
+            <span>Capacidad y frecuencia</span>
+            <span>Itinerario y horarios definitivos</span>
+            <span>Responsables de cada actividad</span>
+            <span>Seguros y protocolos</span>
+            <span>Estándar de atención</span>
+            <span>Fecha de jornada piloto</span>
+          </div>
+          <div class="closing-summary">
+            <span>La experiencia comienza con una buena recepción</span>
+            <span>Se construye con actividades cuidadas</span>
+            <span>Y termina con una despedida memorable</span>
+          </div>
+          <h3>Que el próximo recuerdo inolvidable de Argentina empiece en Magdalena.</h3>
+        </div>
+        <footer class="page-footer page-footer--light"><span>Propuesta confidencial · Documento de trabajo</span><b>05</b></footer>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

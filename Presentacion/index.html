@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Propuesta de alianza para Experiencia Criolla en Magdalena - Día de Gaucho."
+    />
+    <title>Propuesta de alianza | Día de Gaucho</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <svg class="svg-sprite" aria-hidden="true">
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" /><path d="M12 7v5l3.5 2" />
+      </symbol>
+      <symbol id="icon-map" viewBox="0 0 24 24">
+        <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" />
+      </symbol>
+      <symbol id="icon-people" viewBox="0 0 24 24">
+        <circle cx="9" cy="8" r="3" /><path d="M3 20v-2a6 6 0 0 1 12 0v2M16 5.5a3 3 0 0 1 0 5.8M17 14a5 5 0 0 1 4 4.9V20" />
+      </symbol>
+      <symbol id="icon-camera" viewBox="0 0 24 24">
+        <path d="M4 7h4l1.5-2h5L16 7h4v12H4Z" /><circle cx="12" cy="13" r="4" />
+      </symbol>
+      <symbol id="icon-globe" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" />
+      </symbol>
+      <symbol id="icon-megaphone" viewBox="0 0 24 24">
+        <path d="m4 13 14-6v10L4 13Zm0 0v5M8 15l2 5" />
+      </symbol>
+      <symbol id="icon-handshake" viewBox="0 0 24 24">
+        <path d="m8 12 3-3a2 2 0 0 1 3 0l6 6-4 4-6-6M4 15l4 4 3-3M3 8l4-3 4 4M21 8l-4-3-3 3" />
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <path d="m5 12 4 4L19 6" />
+      </symbol>
+      <symbol id="icon-bus" viewBox="0 0 24 24">
+        <path d="M5 17V6c0-2 2-3 7-3s7 1 7 3v11H5Zm0-7h14M8 20v-3M16 20v-3" /><circle cx="8" cy="14" r="1" /><circle cx="16" cy="14" r="1" />
+      </symbol>
+      <symbol id="icon-star" viewBox="0 0 24 24">
+        <path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9Z" />
+      </symbol>
+      <symbol id="icon-drone" viewBox="0 0 24 24">
+        <path d="M8 12h8M12 9v6M4 7h5M15 7h5M4 17h5M15 17h5M6.5 7 9 11M17.5 7 15 11M6.5 17 9 13M17.5 17 15 13" /><circle cx="4" cy="7" r="2" /><circle cx="20" cy="7" r="2" /><circle cx="4" cy="17" r="2" /><circle cx="20" cy="17" r="2" />
+      </symbol>
+    </svg>
+
+    <header class="topbar">
+      <a class="brand" href="#portada" aria-label="Ir a portada">
+        <img src="./assets/logo-dia-de-gaucho.png" alt="" />
+        <span><strong>Día de Gaucho</strong><small>Experiencia en Magdalena</small></span>
+      </a>
+      <nav class="topbar__nav" aria-label="Índice de la presentación">
+        <a href="#experiencia">Experiencia</a>
+        <a href="#alianza">Alianza</a>
+        <a href="#lanzamiento">Lanzamiento</a>
+      </nav>
+      <button class="print-button" type="button" data-print>
+        <span>Exportar PDF</span>
+        <svg><use href="#icon-arrow"></use></svg>
+      </button>
+    </header>
+
+    <aside class="chapter-nav" aria-label="Navegación por capítulos">
+      <a href="#portada" class="is-active"><span>01</span><b>Portada</b></a>
+      <a href="#oportunidad"><span>02</span><b>Oportunidad</b></a>
+      <a href="#experiencia"><span>03</span><b>Concepto</b></a>
+      <a href="#jornada"><span>04</span><b>Jornada</b></a>
+      <a href="#contenido"><span>05</span><b>Recuerdo</b></a>
+      <a href="#alianza"><span>06</span><b>Alianza</b></a>
+      <a href="#comercial"><span>07</span><b>Comercial</b></a>
+      <a href="#lanzamiento"><span>08</span><b>Lanzamiento</b></a>
+      <a href="#acuerdos"><span>09</span><b>Acuerdos</b></a>
+      <a href="#cierre"><span>10</span><b>Cierre</b></a>
+    </aside>
+
+    <main>
+      <section class="slide slide--hero" id="portada" data-chapter="01">
+        <div class="hero__media" aria-hidden="true"></div>
+        <div class="hero__grain" aria-hidden="true"></div>
+        <div class="hero__content reveal">
+          <p class="eyebrow eyebrow--light"><span></span> Propuesta de alianza estratégica</p>
+          <img class="hero__logo" src="./assets/logo-dia-de-gaucho.png" alt="Día de Gaucho, Experiencia en Magdalena" />
+          <h1>
+            <span>Una jornada</span> <span>para vivir</span><br />
+            <em><span>la Argentina</span> <span>de verdad.</span></em>
+          </h1>
+          <p class="hero__lead">
+            Experiencia criolla personalizada de día completo para visitantes nacionales e internacionales,
+            creada y operada desde Magdalena.
+          </p>
+          <div class="hero__facts">
+            <div><svg><use href="#icon-clock"></use></svg><span><strong>10 horas</strong> jornada total</span></div>
+            <div><svg><use href="#icon-map"></use></svg><span><strong>Magdalena</strong> Buenos Aires</span></div>
+            <div><svg><use href="#icon-people"></use></svg><span><strong>Grupos cuidados</strong> atención personalizada</span></div>
+          </div>
+        </div>
+        <div class="hero__folio">Documento de trabajo · Junio 2026</div>
+        <a class="scroll-cue" href="#oportunidad"><span>Conocer la propuesta</span><svg><use href="#icon-arrow"></use></svg></a>
+      </section>
+
+      <section class="slide slide--paper" id="oportunidad" data-chapter="02">
+        <div class="slide__inner">
+          <header class="section-head reveal">
+            <div>
+              <p class="eyebrow"><span></span> La oportunidad</p>
+              <h2>Convertir tradición local en una experiencia turística <em>memorable.</em></h2>
+            </div>
+            <p class="section-head__intro">
+              Un producto listo para conectar el saber gaucho de Magdalena con turistas que buscan
+              autenticidad, cercanía y una historia para llevarse a casa.
+            </p>
+          </header>
+
+          <div class="opportunity-grid reveal">
+            <article class="opportunity-card opportunity-card--dark">
+              <p class="opportunity-card__number">01</p>
+              <svg><use href="#icon-star"></use></svg>
+              <h3>Diferencial real</h3>
+              <p>No es un show observado desde afuera. Cada visitante se viste, participa, aprende y comparte.</p>
+            </article>
+            <article class="opportunity-card">
+              <p class="opportunity-card__number">02</p>
+              <svg><use href="#icon-globe"></use></svg>
+              <h3>Accesible al mundo</h3>
+              <p>Relato histórico e interpretación en inglés para que el idioma nunca limite la experiencia.</p>
+            </article>
+            <article class="opportunity-card opportunity-card--image">
+              <p class="opportunity-card__number">03</p>
+              <svg><use href="#icon-camera"></use></svg>
+              <h3>Recuerdo tangible</h3>
+              <p>Fotografía y video editados convierten un gran día en contenido que sigue circulando.</p>
+            </article>
+          </div>
+
+          <div class="statement reveal">
+            <span>Visión compartida</span>
+            <p>
+              Posicionar a Magdalena como destino de referencia para vivir una experiencia gaucha
+              <strong>cuidada, auténtica y comercializable durante todo el año.</strong>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide slide--dark" id="experiencia" data-chapter="03">
+        <div class="slide__inner">
+          <header class="section-head section-head--light reveal">
+            <div>
+              <p class="eyebrow eyebrow--light"><span></span> El concepto</p>
+              <h2>Un día de gaucho.<br /><em>Una historia completa.</em></h2>
+            </div>
+            <p class="section-head__intro">
+              La propuesta combina hospitalidad, cultura, destreza, gastronomía y contenido audiovisual
+              en una jornada diseñada de punta a punta.
+            </p>
+          </header>
+
+          <div class="pillars reveal">
+            <article class="pillar pillar--photo pillar--tradition">
+              <span>01</span><h3>Tradición viva</h3>
+              <p>Recepción, vestimenta, historia de Magdalena y costumbres gauchas.</p>
+            </article>
+            <article class="pillar pillar--photo pillar--horse">
+              <span>02</span><h3>Participación</h3>
+              <p>Cabalgata guiada, fotos caracterizadas y carrera de sortijas.</p>
+            </article>
+            <article class="pillar pillar--photo pillar--asado">
+              <span>03</span><h3>Mesa criolla</h3>
+              <p>Asado tradicional y encuentro alrededor del fuego.</p>
+            </article>
+            <article class="pillar pillar--accent">
+              <span>04</span><h3>Folklore</h3>
+              <p>Música, baile y participación para cerrar el día celebrando.</p>
+              <svg><use href="#icon-star"></use></svg>
+            </article>
+          </div>
+
+          <div class="feature-strip reveal">
+            <p><svg><use href="#icon-check"></use></svg> Acompañamiento en español e inglés</p>
+            <p><svg><use href="#icon-check"></use></svg> Atención personalizada y ritmo cuidado</p>
+            <p><svg><use href="#icon-check"></use></svg> Operación adaptable a cada grupo</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide slide--paper" id="jornada" data-chapter="04">
+        <div class="slide__inner">
+          <header class="section-head reveal">
+            <div>
+              <p class="eyebrow"><span></span> La jornada propuesta</p>
+              <h2>Diez horas que fluyen<br /><em>como una sola experiencia.</em></h2>
+            </div>
+            <div class="time-summary">
+              <strong>08:00 → 18:00</strong>
+              <span>Capital Federal · Magdalena · Capital Federal</span>
+            </div>
+          </header>
+
+          <div class="timeline reveal">
+            <article><time>08:00</time><span class="timeline__dot"></span><div><b>Salida desde Capital</b><small>Traslado y bienvenida inicial.</small></div></article>
+            <article><time>10:00</time><span class="timeline__dot"></span><div><b>Recepción criolla</b><small>Mate, presentación y vestimenta gaucha.</small></div></article>
+            <article><time>10:45</time><span class="timeline__dot"></span><div><b>Historia viva</b><small>Magdalena y cultura gaucha, con interpretación en inglés.</small></div></article>
+            <article><time>11:30</time><span class="timeline__dot"></span><div><b>Cabalgata + retratos</b><small>Actividad guiada y sesión fotográfica.</small></div></article>
+            <article><time>13:00</time><span class="timeline__dot"></span><div><b>Destreza y sortijas</b><small>Demostración y participación adaptada al grupo.</small></div></article>
+            <article><time>14:00</time><span class="timeline__dot"></span><div><b>Asado criollo</b><small>Almuerzo tradicional y sobremesa.</small></div></article>
+            <article><time>15:15</time><span class="timeline__dot"></span><div><b>Folklore y despedida</b><small>Música, baile y cierre de la experiencia.</small></div></article>
+            <article><time>16:00</time><span class="timeline__dot"></span><div><b>Regreso a Capital</b><small>Llegada estimada a las 18:00.</small></div></article>
+          </div>
+
+          <p class="note reveal">
+            Itinerario base sujeto a validación operativa, clima, tamaño del grupo y bienestar de los animales.
+          </p>
+        </div>
+      </section>
+
+      <section class="slide slide--visual" id="contenido" data-chapter="05">
+        <div class="visual-panel visual-panel--photo" aria-hidden="true"></div>
+        <div class="visual-content reveal">
+          <p class="eyebrow eyebrow--light"><span></span> El recuerdo también es parte del producto</p>
+          <h2>La experiencia termina.<br /><em>La historia sigue viajando.</em></h2>
+          <p class="visual-content__lead">
+            Cada jornada será registrada para entregar a los visitantes un recuerdo personal,
+            profesional y listo para compartir.
+          </p>
+          <div class="deliverables">
+            <article><svg><use href="#icon-camera"></use></svg><div><b>Fotografía profesional</b><span>Momentos espontáneos y retratos vestidos de gaucho.</span></div></article>
+            <article><svg><use href="#icon-drone"></use></svg><div><b>Video + tomas aéreas</b><span>Registro de actividades exteriores y cabalgata.</span></div></article>
+            <article><strong>48–72h</strong><div><b>Entrega digital editada</b><span>Carpeta privada de Drive para cada jornada.</span></div></article>
+          </div>
+          <div class="content-value">
+            <span>Valor adicional</span>
+            <p>El contenido compartido por cada visitante amplifica orgánicamente el alcance de la experiencia y de Magdalena.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide slide--paper" id="alianza" data-chapter="06">
+        <div class="slide__inner">
+          <header class="section-head reveal">
+            <div>
+              <p class="eyebrow"><span></span> La alianza</p>
+              <h2>Dos equipos.<br /><em>Una propuesta integral.</em></h2>
+            </div>
+            <p class="section-head__intro">
+              El producto funciona cuando la autenticidad operativa y la capacidad comercial avanzan
+              con objetivos, estándares y responsabilidades claras.
+            </p>
+          </header>
+
+          <div class="roles reveal">
+            <article class="role-card role-card--ours">
+              <div class="role-card__head">
+                <span>Nuestro equipo</span>
+                <svg><use href="#icon-megaphone"></use></svg>
+              </div>
+              <h3>Marca, comercialización y experiencia digital</h3>
+              <ul>
+                <li>Branding, website, hosting y sistema de consultas/reservas.</li>
+                <li>Redes sociales, campañas, contenido y marketing digital.</li>
+                <li>Acuerdos con agencias, hoteles, cruceros y operadores.</li>
+                <li>Coordinación comercial previa con cada grupo.</li>
+                <li>Fotografía, video, dron, edición y entrega por Drive.</li>
+                <li>Intérprete en inglés y adaptación del relato.</li>
+              </ul>
+            </article>
+            <div class="roles__plus"><svg><use href="#icon-handshake"></use></svg><span>Alianza</span></div>
+            <article class="role-card role-card--partner">
+              <div class="role-card__head">
+                <span>Centro Gaucho asociado</span>
+                <svg><use href="#icon-people"></use></svg>
+              </div>
+              <h3>Operación, tradición y hospitalidad local</h3>
+              <ul>
+                <li>Diseño y ejecución final del itinerario de actividades.</li>
+                <li>Espacio, recepción, vestuario y ambientación criolla.</li>
+                <li>Caballos, guías, seguridad y bienestar animal.</li>
+                <li>Demostraciones, sortijas, folklore y relato histórico.</li>
+                <li>Asado, bebidas, servicio gastronómico e infraestructura.</li>
+                <li>Personal operativo y coordinación durante la jornada.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide slide--dark" id="comercial" data-chapter="07">
+        <div class="slide__inner">
+          <header class="section-head section-head--light reveal">
+            <div>
+              <p class="eyebrow eyebrow--light"><span></span> Estrategia comercial</p>
+              <h2>Una experiencia local<br /><em>con alcance internacional.</em></h2>
+            </div>
+            <p class="section-head__intro">
+              Construiremos demanda propia y una red de aliados que ya reciben a los visitantes
+              que queremos traer a Magdalena.
+            </p>
+          </header>
+
+          <div class="channel-flow reveal">
+            <div class="channel-flow__source">
+              <span>Generación de demanda</span>
+              <article><svg><use href="#icon-globe"></use></svg><b>Web + redes</b></article>
+              <article><svg><use href="#icon-megaphone"></use></svg><b>Campañas</b></article>
+            </div>
+            <div class="channel-flow__line"><span></span><b>Reservas</b><span></span></div>
+            <div class="channel-flow__product">
+              <img src="./assets/logo-dia-de-gaucho.png" alt="" />
+              <strong>Experiencia<br />Día de Gaucho</strong>
+              <small>Magdalena</small>
+            </div>
+            <div class="channel-flow__line"><span></span><b>Alianzas</b><span></span></div>
+            <div class="channel-flow__source">
+              <span>Canales turísticos</span>
+              <article><svg><use href="#icon-people"></use></svg><b>Hoteles + agencias</b></article>
+              <article><svg><use href="#icon-bus"></use></svg><b>Cruceros + operadores</b></article>
+            </div>
+          </div>
+
+          <div class="commercial-metrics reveal">
+            <article><span>Producto</span><strong>Excursión premium de día completo</strong></article>
+            <article><span>Precio de referencia</span><strong>USD 250–300 por persona</strong><small>A validar según costos y capacidad.</small></article>
+            <article><span>Canal</span><strong>Venta directa + comisiones</strong><small>Esquema a definir por canal.</small></article>
+            <article><span>Promesa</span><strong>Autenticidad + servicio cuidado</strong></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide slide--paper" id="lanzamiento" data-chapter="08">
+        <div class="slide__inner">
+          <header class="section-head reveal">
+            <div>
+              <p class="eyebrow"><span></span> Hoja de ruta propuesta</p>
+              <h2>De la mesa de trabajo<br /><em>a la primera jornada.</em></h2>
+            </div>
+            <p class="section-head__intro">
+              Un lanzamiento por etapas permite validar la operación, producir material real y salir
+              a vender con una experiencia sólida.
+            </p>
+          </header>
+
+          <div class="roadmap reveal">
+            <article class="roadmap__phase">
+              <span class="roadmap__number">01</span>
+              <div><small>Semanas 1–2</small><h3>Definición</h3></div>
+              <ul><li>Acuerdo de roles y modelo</li><li>Capacidad y calendario</li><li>Costos y protocolo de seguridad</li></ul>
+            </article>
+            <article class="roadmap__phase">
+              <span class="roadmap__number">02</span>
+              <div><small>Semanas 3–4</small><h3>Diseño operativo</h3></div>
+              <ul><li>Itinerario final</li><li>Guion histórico bilingüe</li><li>Prueba de gastronomía y actividades</li></ul>
+            </article>
+            <article class="roadmap__phase">
+              <span class="roadmap__number">03</span>
+              <div><small>Semana 5</small><h3>Jornada piloto</h3></div>
+              <ul><li>Grupo invitado reducido</li><li>Registro foto y video</li><li>Ajustes de tiempos y servicio</li></ul>
+            </article>
+            <article class="roadmap__phase roadmap__phase--active">
+              <span class="roadmap__number">04</span>
+              <div><small>Desde semana 6</small><h3>Lanzamiento</h3></div>
+              <ul><li>Web y campañas activas</li><li>Presentación a canales</li><li>Primeras fechas comercializadas</li></ul>
+            </article>
+          </div>
+
+          <div class="pilot-callout reveal">
+            <div><span>Primer hito compartido</span><strong>Realizar una jornada piloto completa</strong></div>
+            <p>La prueba nos dará material comercial real, costos comprobados y un estándar operativo común.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide slide--texture" id="acuerdos" data-chapter="09">
+        <div class="slide__inner">
+          <header class="section-head reveal">
+            <div>
+              <p class="eyebrow"><span></span> Mesa de trabajo</p>
+              <h2>Lo que necesitamos<br /><em>definir juntos.</em></h2>
+            </div>
+            <p class="section-head__intro">
+              Estos puntos transforman la idea en un producto vendible, seguro y sostenible para ambos equipos.
+            </p>
+          </header>
+
+          <div class="decision-grid reveal">
+            <article><span>01</span><h3>Capacidad y frecuencia</h3><p>Mínimo, máximo, días disponibles y anticipación necesaria.</p></article>
+            <article><span>02</span><h3>Itinerario definitivo</h3><p>Actividades, duración, responsables y alternativas por clima.</p></article>
+            <article><span>03</span><h3>Costos y reparto</h3><p>Costo por jornada, precio final, margen y comisiones por canal.</p></article>
+            <article><span>04</span><h3>Seguridad y seguros</h3><p>Protocolos, cobertura, aptitudes, emergencias y bienestar animal.</p></article>
+            <article><span>05</span><h3>Estándar de servicio</h3><p>Recepción, vestuario, gastronomía, idiomas y atención al visitante.</p></article>
+            <article><span>06</span><h3>Identidad del socio</h3><p>Nombre, historia, voceros, datos de contacto y presencia de marca.</p></article>
+          </div>
+
+          <div class="decision-footer reveal">
+            <svg><use href="#icon-handshake"></use></svg>
+            <p><strong>Objetivo de la próxima reunión:</strong> acordar responsables y fecha tentativa para la jornada piloto.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide slide--closing" id="cierre" data-chapter="10">
+        <div class="closing__media" aria-hidden="true"></div>
+        <div class="closing__content reveal">
+          <img src="./assets/logo-dia-de-gaucho.png" alt="Día de Gaucho, Experiencia en Magdalena" />
+          <p class="eyebrow eyebrow--light"><span></span> Invitación a construir juntos</p>
+          <h2>Que el próximo recuerdo<br />inolvidable de Argentina<br /><em>empiece en Magdalena.</em></h2>
+          <div class="closing__action">
+            <span>Próximo paso</span>
+            <strong>Definir la jornada piloto</strong>
+            <p>Fecha · capacidad · responsables · costos</p>
+          </div>
+        </div>
+        <footer class="closing__footer">
+          <span>Experiencia Criolla en Magdalena</span>
+          <span>Propuesta confidencial · Documento de trabajo</span>
+        </footer>
+      </section>
+    </main>
+
+    <div class="mobile-progress" aria-hidden="true"><span></span></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
