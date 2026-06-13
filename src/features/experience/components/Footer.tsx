@@ -30,6 +30,7 @@ const LogoContainer = styled.div`
     box-shadow: none;
 
     @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+      flex: 0 1 auto;
       flex-direction: row;
       background-color: white;
       padding: ${({ theme }) => `${theme.spacing[4]} ${theme.spacing[8]}`};
