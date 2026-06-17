@@ -107,12 +107,12 @@ svg {
 }
 
 .screen-toolbar b {
-  font-size: 0.76rem;
+  font-size: 0.8rem;
 }
 
 .screen-toolbar small {
   color: var(--sand-light);
-  font-size: 0.58rem;
+  font-size: 0.62rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -126,7 +126,7 @@ svg {
   border: 0;
   border-radius: 999px;
   cursor: pointer;
-  font-size: 0.67rem;
+  font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -206,7 +206,7 @@ svg {
 .kicker {
   margin: 0 0 3mm;
   color: var(--leather);
-  font-size: 7.2pt;
+  font-size: 7.8pt;
   font-weight: 800;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -242,7 +242,7 @@ h3 {
   color: var(--white);
   background: var(--leather);
   border-radius: 99px;
-  font-size: 6.4pt;
+  font-size: 7pt;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -266,7 +266,7 @@ h3 {
   align-items: center;
   justify-content: space-between;
   color: rgba(44, 30, 22, 0.75);
-  font-size: 6.2pt;
+  font-size: 6.8pt;
   font-weight: 700;
   letter-spacing: 0.11em;
   text-transform: uppercase;
@@ -280,7 +280,7 @@ h3 {
   color: var(--white);
   background: var(--leather);
   border-radius: 50%;
-  font-size: 6pt;
+  font-size: 6.5pt;
 }
 
 .page-footer--light {
@@ -392,12 +392,12 @@ h3 {
 }
 
 .cover__facts b {
-  font-size: 7.3pt;
+  font-size: 8pt;
 }
 
 .cover__facts span {
   color: rgba(255, 255, 255, 0.62);
-  font-size: 5.8pt;
+  font-size: 6.5pt;
   line-height: 1.4;
 }
 
@@ -424,7 +424,7 @@ h3 {
   top: 5mm;
   right: 5mm;
   color: var(--leather);
-  font-size: 6pt;
+  font-size: 6.6pt;
   font-weight: 800;
 }
 
@@ -443,7 +443,7 @@ h3 {
 .summary-grid p {
   margin-bottom: 0;
   color: var(--muted);
-  font-size: 7.5pt;
+  font-size: 8.3pt;
   line-height: 1.6;
 }
 
@@ -465,7 +465,7 @@ h3 {
   max-width: 135mm;
   margin: 0 auto;
   color: rgba(255, 255, 255, 0.68);
-  font-size: 7.5pt;
+  font-size: 8.3pt;
   line-height: 1.55;
 }
 
@@ -488,7 +488,7 @@ h3 {
   display: inline-block;
   margin-bottom: 6mm;
   color: var(--leather);
-  font-size: 6.5pt;
+  font-size: 7pt;
   font-weight: 800;
   letter-spacing: 0.08em;
 }
@@ -504,7 +504,7 @@ h3 {
   color: var(--white);
   background: var(--leather);
   border-radius: 50%;
-  font-size: 5.5pt;
+  font-size: 6pt;
   font-weight: 800;
 }
 
@@ -516,7 +516,7 @@ h3 {
 .activity-grid p {
   margin-bottom: 0;
   color: var(--muted);
-  font-size: 6.8pt;
+  font-size: 7.5pt;
   line-height: 1.5;
 }
 
@@ -549,7 +549,7 @@ h3 {
   bottom: 5mm;
   left: 6mm;
   color: var(--white);
-  font-size: 6.6pt;
+  font-size: 7.2pt;
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -565,7 +565,7 @@ h3 {
   color: var(--white);
   background: rgba(44, 30, 22, 0.94);
   border-radius: 3mm;
-  font-size: 7.6pt;
+  font-size: 8.3pt;
   line-height: 1.6;
 }
 
@@ -592,7 +592,7 @@ h3 {
   color: var(--white);
   background: var(--leather);
   border-radius: 50%;
-  font-size: 6pt;
+  font-size: 6.5pt;
 }
 
 .horse-steps h3 {
@@ -603,7 +603,7 @@ h3 {
 .horse-steps p {
   margin-bottom: 0;
   color: var(--muted);
-  font-size: 6.7pt;
+  font-size: 7.4pt;
   line-height: 1.55;
 }
 
@@ -621,7 +621,7 @@ h3 {
 .safety-note b {
   flex: 0 0 31mm;
   color: var(--sand-light);
-  font-size: 6.3pt;
+  font-size: 6.9pt;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -629,7 +629,7 @@ h3 {
 .safety-note p {
   margin-bottom: 0;
   color: rgba(255, 255, 255, 0.74);
-  font-size: 6.5pt;
+  font-size: 7.2pt;
   line-height: 1.5;
 }
 
@@ -687,7 +687,7 @@ h3 {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 2.5mm;
-  font-size: 6.8pt;
+  font-size: 7.4pt;
   font-weight: 700;
 }
 
@@ -704,7 +704,7 @@ h3 {
 
 .closing-summary span {
   color: rgba(255, 255, 255, 0.78);
-  font-size: 7pt;
+  font-size: 7.6pt;
   line-height: 1.45;
 }
 
