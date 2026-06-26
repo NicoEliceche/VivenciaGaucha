@@ -100,7 +100,7 @@ export const Location: React.FC = () => {
           allowFullScreen={true} 
           loading="lazy" 
           referrerPolicy="no-referrer-when-downgrade"
-          title="Ubicación Asociación Tradicionalista Gauchos de Magdalena"
+          title="Ubicación Agrupación Tradicionalista Gauchos de Magdalena"
         />
       </MapContainer>
       <MapsLink href={externalMapsUrl} target="_blank" rel="noopener noreferrer">

@@ -22,9 +22,47 @@ const Title = styled.h2`
 `;
 
 const Accordion = styled.div`
+  --faq-question-min-height: ${({ theme }) => theme.spacing[16]};
+
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing[4]};
+  max-height: calc(
+    var(--faq-question-min-height) +
+    var(--faq-question-min-height) +
+    var(--faq-question-min-height) +
+    var(--faq-question-min-height) +
+    var(--faq-question-min-height) +
+    ${({ theme }) => theme.spacing[4]} +
+    ${({ theme }) => theme.spacing[4]} +
+    ${({ theme }) => theme.spacing[4]} +
+    ${({ theme }) => theme.spacing[4]}
+  );
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: ${({ theme }) => theme.spacing[2]};
+  scrollbar-color: ${({ theme }) => `${theme.color.accent} ${theme.color.light}`};
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    --faq-question-min-height: ${({ theme }) => theme.spacing[20]};
+    padding-right: ${({ theme }) => theme.spacing[1]};
+  }
+
+  &::-webkit-scrollbar {
+    width: ${({ theme }) => theme.spacing[2]};
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: ${({ theme }) => theme.color.light};
+    border-radius: ${({ theme }) => theme.radius.full};
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.color.accent};
+    border-radius: ${({ theme }) => theme.radius.full};
+  }
 `;
 
 const Item = styled.div`
@@ -36,6 +74,7 @@ const Question = styled.button<{ isOpen: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: var(--faq-question-min-height);
   padding: ${({ theme }) => `${theme.spacing[4]} 0`};
   background: none;
   border: none;
@@ -72,15 +111,16 @@ const Answer = styled.div<{ isOpen: boolean }>`
 
 export const FAQ: React.FC = () => {
   const { t } = useLanguage();
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const faqs = [
-    { q: t('faq_q1'), a: t('faq_a1') },
-    { q: t('faq_q2'), a: t('faq_a2') },
-    { q: t('faq_q3'), a: t('faq_a3') },
-    { q: t('faq_q4'), a: t('faq_a4') },
-    { q: t('faq_q5'), a: t('faq_a5') },
-  ];
+  const faqs = Array.from({ length: 26 }, (_, index) => {
+    const itemNumber = index + 1;
+
+    return {
+      q: t(`faq_q${itemNumber}`),
+      a: t(`faq_a${itemNumber}`),
+    };
+  });
 
   const toggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -95,6 +135,7 @@ export const FAQ: React.FC = () => {
             <Question 
               isOpen={openIndex === index} 
               onClick={() => toggle(index)}
+              aria-expanded={openIndex === index}
             >
               {faq.q}
             </Question>

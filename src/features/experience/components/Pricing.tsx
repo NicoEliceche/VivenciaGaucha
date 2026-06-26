@@ -5,9 +5,9 @@ import mateImg from '../../../../frontend/assets/mate.png';
 
 const PricingWrapper = styled.section`
   padding: ${({ theme }) => `${theme.spacing[20]} ${theme.spacing[4]}`};
-  background-color: ${({ theme }) => theme.color.background};
+  background-color: ${({ theme }) => theme.color.primaryDark};
   text-align: center;
-  scroll-margin-top: 4rem;
+  scroll-margin-top: ${({ theme }) => theme.spacing[16]};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     padding: ${({ theme }) => `${theme.spacing[24]} ${theme.spacing[12]}`};
@@ -17,7 +17,7 @@ const PricingWrapper = styled.section`
 const Title = styled.h2`
   font-family: ${({ theme }) => theme.typography.fontFamily.title};
   font-size: ${({ theme }) => theme.typography.size['3xl']};
-  color: ${({ theme }) => theme.color.primary};
+  color: ${({ theme }) => theme.color.accentLight};
   margin-bottom: ${({ theme }) => theme.spacing[4]};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -29,7 +29,7 @@ const Subtitle = styled.p`
   font-size: ${({ theme }) => theme.typography.size.lg};
   max-width: 42rem;
   margin: 0 auto ${({ theme }) => theme.spacing[12]};
-  color: ${({ theme }) => theme.color.neutral[600]};
+  color: ${({ theme }) => theme.color.neutral[100]};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: ${({ theme }) => theme.typography.size.xl};

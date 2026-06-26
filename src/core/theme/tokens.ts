@@ -46,7 +46,7 @@ export const tokens = {
 
   typography: {
     fontFamily: {
-      title: "'Rye', serif",
+      title: "'Milonga', serif",
       sans: "'Inter', sans-serif",
     },
     size: {

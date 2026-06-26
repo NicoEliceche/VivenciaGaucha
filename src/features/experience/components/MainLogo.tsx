@@ -70,11 +70,11 @@ const DesktopBrandLine = styled.span`
 
 export const MainLogo: React.FC = () => (
   <LogoWrapper>
-    <LogoImage src={logoImg} alt="Asociación Tradicionalista Gauchos de Magdalena" />
+    <LogoImage src={logoImg} alt="Agrupación Tradicionalista Gauchos de Magdalena" />
     <BrandName>
-      <MobileBrandLine>Asociación Tradicionalista</MobileBrandLine>
+      <MobileBrandLine>Agrupación Tradicionalista</MobileBrandLine>
       <MobileBrandLine>Gauchos de Magdalena</MobileBrandLine>
-      <DesktopBrandLine>Asociación Tradicionalista Gauchos</DesktopBrandLine>
+      <DesktopBrandLine>Agrupación Tradicionalista Gauchos</DesktopBrandLine>
       <DesktopBrandLine>de Magdalena</DesktopBrandLine>
     </BrandName>
   </LogoWrapper>
