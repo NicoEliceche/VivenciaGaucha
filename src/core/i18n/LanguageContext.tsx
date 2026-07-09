@@ -21,13 +21,13 @@ const translations: TranslationDictionary = {
   hero_title_2: { es: 'experiencia criolla', en: 'cultural criollo' },
   hero_title_3: { es: 'cultural en Magdalena', en: 'experience in Magdalena' },
   hero_desc: { 
-    es: 'Traslado desde Capital Federal, costillar al asador, caballos, destreza gaucha y folclore.', 
-    en: 'Round-trip from Buenos Aires, traditional barbecue, horseback riding, gaucho skills and folklore.' 
+    es: 'Traslado opcional desde tu hotel o residencia, costillar al asador, fotos con caballos, destreza gaucha y folclore.',
+    en: 'Optional round-trip transfer from your hotel or residence, traditional asado, photos with horses, gaucho skills and folklore.'
   },
   hero_cta: { es: 'Asegurá tu lugar', en: 'Secure your spot' },
   hero_cta_subtext: { 
-    es: 'Experimentá un día criollo en el campo argentino', 
-    en: 'Experience a traditional criollo day in the Argentine countryside' 
+    es: 'Experimentá un día criollo en una posta tradicional de Magdalena',
+    en: 'Experience a traditional criollo day at a Magdalena posta'
   },
   
   // Services
@@ -35,21 +35,41 @@ const translations: TranslationDictionary = {
   services_subtitle: { es: 'Una experiencia inmersiva de principio a fin. Mimetizate con el verdadero gaucho argentino tradicional.', en: 'An immersive experience from start to finish. Immerse yourself in the life of a true traditional Argentine gaucho.' },
   
   service_tradition_title: { es: 'Historia y Tradición', en: 'History & Tradition' },
-  service_tradition_desc: { 
-    es: 'Nuestro speaker te sumergirá en la rica historia de Magdalena y los gauchos. Además, vas a vestirte con boina, alpargatas y faja todo el día.',
-    en: 'Our speaker will immerse you in the rich history of Magdalena and the gauchos. You will also wear a beret, espadrilles, and a sash all day.'
+  service_tradition_desc: {
+    es: 'Compartimos la historia de los gauchos y de Magdalena, ciudad con raíz de pueblo, para entender la tradición antes de vivir la posta.',
+    en: 'We share the history of the gauchos and Magdalena, a city with town roots, so guests understand the tradition before living the posta.'
   },
   
-  service_horse_title: { es: 'A Caballo', en: 'Horseback Riding' },
+  service_horse_title: { es: 'Foto a Caballo', en: 'Horse Photo' },
   service_horse_desc: {
-    es: 'Montá a caballo por la inmensidad de la llanura y disfrutá de nuestros exclusivos espectáculos ecuestres demostrando la destreza gaucha.',
-    en: 'Ride horses through the vast plains and enjoy our exclusive equestrian shows demonstrating gaucho skills.'
+    es: 'Montá para sacarte fotos vestido de gaucho/a y, si el equipo lo habilita, dar unos pasos guiados en el predio.',
+    en: 'Mount a horse for photos in gaucho attire and, if the team allows it, take a few guided steps on the grounds.'
   },
   
   service_asado_title: { es: 'El Gran Asado', en: 'The Great Barbecue' },
   service_asado_desc: {
-    es: 'Coronamos el día viviendo la magia de un auténtico costillar al asador, acompañado de baile típico argentino y shows folclóricos en vivo.',
-    en: 'We crown the day experiencing the magic of an authentic barbecue (asador), accompanied by traditional Argentine dance and live folklore shows.'
+    es: 'Gauchos cocinando costillar al asador al estilo criollo, bien campero y tradicional. Vas a poder ver la preparación y el fuego de cerca.',
+    en: 'Gauchos cook ribs on the asador in a rustic, traditional criollo style. Guests can watch the preparation and the fire up close.'
+  },
+  service_folklore_title: { es: 'Folclore', en: 'Folklore' },
+  service_folklore_desc: {
+    es: 'Escuchá música, mirá bailar e intentá algunos pasos de folclore con la ayuda de los gauchos.',
+    en: 'Listen to the music, watch the dancing, and try a few folklore steps with help from the gauchos.'
+  },
+  service_dress_title: { es: 'Vestirse de gaucho/a', en: 'Dress as a Gaucho' },
+  service_dress_desc: {
+    es: 'Te prestamos prendas criollas para sacarte fotos en la posta, junto a gauchos reales y montado/a a caballo.',
+    en: 'Wear traditional criollo clothing and take photos at the posta, alongside real gauchos and mounted on a horse.'
+  },
+  service_skills_title: { es: 'Destreza gaucha', en: 'Gaucho Skills' },
+  service_skills_desc: {
+    es: 'Demostraciones de habilidades gauchas con el caballo realizadas por el equipo local, en un entorno controlado y sin cabalgata.',
+    en: 'Watch local gauchos demonstrate horse-handling skills in a controlled setting, without a trail ride.'
+  },
+  service_media_title: { es: 'Fotos y dron', en: 'Photos & Drone' },
+  service_media_desc: {
+    es: 'En las actividades al aire libre vamos a registrar ciertos momentos con dron y compartir el material por Google Drive.',
+    en: 'During outdoor activities, we capture selected moments with a drone and share the media through Google Drive.'
   },
 
   // Multimedia
@@ -59,7 +79,7 @@ const translations: TranslationDictionary = {
     en: 'We know this is a unique experience. That\'s why we document your day with cinematic quality so you can have a forever memory.'
   },
   multimedia_item_1: { es: 'Fotógrafo profesional cubriendo toda la jornada.', en: 'Professional photographer covering the whole day.' },
-  multimedia_item_2: { es: 'Filmaciones con Dron del almuerzo y los caballos.', en: 'Drone filming of lunch and horses.' },
+  multimedia_item_2: { es: 'Filmaciones con dron de momentos al aire libre, según clima y condiciones.', en: 'Drone footage of outdoor moments, depending on weather and conditions.' },
   multimedia_item_3: { es: 'Edición premium lista a los pocos días.', en: 'Premium editing ready within a few days.' },
   multimedia_item_4: { es: 'Carpeta pública en Google Drive para descargar y compartir.', en: 'Public Google Drive folder to download and share.' },
   multimedia_visual_title: { es: 'Contenido listo para brillar', en: 'Content ready to shine' },
@@ -72,32 +92,32 @@ const translations: TranslationDictionary = {
 
   // Pricing
   pricing_title: { es: 'Asegurá tu experiencia', en: 'Secure your experience' },
-  pricing_subtitle: { es: 'Un servicio All-Inclusive desde el transporte hasta el material multimedia final.', en: 'All-inclusive service from transport to the final multimedia material.' },
+  pricing_subtitle: { es: 'Servicio completo con actividades criollas, almuerzo, multimedia y traslado opcional.', en: 'A complete service with criollo activities, lunch, media coverage, and optional transfer.' },
   pricing_badge: { es: 'Paquete Único', en: 'Single Package' },
   pricing_card_title: { es: 'Experiencia Gaucha Criolla', en: 'Gaucho Criollo Experience' },
   pricing_card_venue: { es: 'Agrupación Tradicionalista Gauchos de Magdalena', en: 'Agrupación Tradicionalista Gauchos de Magdalena' },
-  pricing_feature_1: { es: 'Traslado CABA - Magdalena ida y vuelta.', en: 'Round-trip CABA - Magdalena transfer.' },
+  pricing_feature_1: { es: 'Traslado ida y vuelta desde hotel o residencia disponible como opcional.', en: 'Optional round-trip transfer from your hotel or residence.' },
   pricing_feature_2: { es: 'Almuerzo libre: Costillar y bebidas.', en: 'Open lunch: Traditional BBQ and drinks.' },
-  pricing_feature_3: { es: 'Cabalgatas, baile, historia y vestimenta.', en: 'Horseback riding, dance, history, and attire.' },
+  pricing_feature_3: { es: 'Historia, folclore, vestimenta criolla, fotos a caballo y destreza gaucha.', en: 'History, folklore, criollo attire, horse photos, and gaucho skills.' },
   pricing_feature_4: { es: 'Pack de Fotos y Dron vía Google Drive.', en: 'Photo & Drone pack via Google Drive.' },
   pricing_cta: { es: 'Consultar Disponibilidad', en: 'Check Availability' },
 
   // Floating CTA
-  floating_cta: { es: 'Ver Paquete All-Inclusive', en: 'View All-Inclusive Package' },
+  floating_cta: { es: 'Ver experiencia y opciones', en: 'View experience options' },
   
   // New CTAs
   cta_roots: { es: 'No dejes pasar la oportunidad de conectar con tus raíces.', en: 'Don\'t miss the opportunity to connect with your roots.' },
-  cta_magic: { es: 'Viví la verdadera magia del campo argentino.', en: 'Experience the true magic of the Argentine countryside.' },
+  cta_magic: { es: 'Viví la verdadera magia de una posta gaucha argentina.', en: 'Experience the true magic of an Argentine gaucho posta.' },
   cta_history: { es: 'Tu lugar en la historia te espera.', en: 'Your place in history awaits you.' },
   cta_join_us: { es: 'Un día inolvidable te está esperando, ¿te sumás?', en: 'An unforgettable day is waiting for you, will you join us?' },
 
   // Reviews
   reviews_title: { es: 'Voces de nuestra tierra', en: 'Voices from our land' },
-  review_1_text: { es: '"Una experiencia única. El costillar al asador fue lo mejor que probé en mi vida y la cabalgata al atardecer no tiene precio."', en: '"A unique experience. The barbecue was the best I\'ve ever had and the sunset ride is priceless."' },
+  review_1_text: { es: '"Una experiencia única. El costillar al asador fue lo mejor que probé en mi vida y las fotos vestidos de gaucho quedaron increíbles."', en: '"A unique experience. The barbecue was the best I\'ve ever had and the photos in gaucho attire were incredible."' },
   review_1_author: { es: 'Juan Manuel - Buenos Aires', en: 'Juan Manuel - Buenos Aires' },
   review_2_text: { es: '"Llevamos a unos amigos del exterior y quedaron fascinados. La atención de los gauchos y el show de folclore son de primer nivel."', en: '"We took some friends from abroad and they were fascinated. The gauchos\' attention and the folklore show are top-notch."' },
   review_2_author: { es: 'Elena R. - Emprendedora', en: 'Elena R. - Entrepreneur' },
-  review_3_text: { es: '"Lo que más me gustó fue el material del dron. Tener un video profesional de nosotros cabalgando es un recuerdo para siempre."', en: '"What I liked most was the drone footage. Having a professional video of us riding is a memory for a lifetime."' },
+  review_3_text: { es: '"Lo que más me gustó fue el material del dron. Tener un video profesional de la jornada es un recuerdo para siempre."', en: '"What I liked most was the drone footage. Having a professional video of the day is a memory for a lifetime."' },
   review_3_author: { es: 'Ricardo G. - Turista', en: 'Ricardo G. - Tourist' },
 
   // FAQ
@@ -105,21 +125,21 @@ const translations: TranslationDictionary = {
   faq_q1: { es: '¿Qué pasa si llueve o hay mal clima?', en: 'What happens if it rains or the weather is bad?' },
   faq_a1: { es: 'La prioridad es la seguridad. Si el clima impide las actividades al aire libre, reprogramamos o adaptamos la jornada según disponibilidad.', en: 'Safety comes first. If weather prevents outdoor activities, we reschedule or adapt the day depending on availability.' },
   faq_q2: { es: '¿Cuánto dura la experiencia completa?', en: 'How long does the full experience last?' },
-  faq_a2: { es: 'Es una jornada de día completo. Con traslados desde CABA, calculá salir por la mañana y volver al atardecer.', en: 'It is a full-day outing. With transfers from Buenos Aires, expect a morning departure and an evening return.' },
+  faq_a2: { es: 'Es una jornada de día completo. Si contratás traslado, calculá salir por la mañana y volver al atardecer.', en: 'It is a full-day outing. If you book the transfer, expect a morning departure and an evening return.' },
   faq_q3: { es: '¿Desde dónde salen los traslados?', en: 'Where do transfers depart from?' },
-  faq_a3: { es: 'Coordinamos puntos de encuentro en CABA o pickup privado según el grupo. Te confirmamos horario y dirección al reservar.', en: 'We coordinate meeting points in Buenos Aires or private pickup depending on the group. Time and address are confirmed when booking.' },
+  faq_a3: { es: 'Coordinamos pickup en hotel, residencia o punto de encuentro según el grupo. Te confirmamos horario y dirección al reservar.', en: 'We coordinate pickup at a hotel, residence, or meeting point depending on the group. Time and address are confirmed when booking.' },
   faq_q4: { es: '¿La experiencia incluye ida y vuelta?', en: 'Is round-trip transfer included?' },
-  faq_a4: { es: 'Sí, el paquete contempla traslado CABA-Magdalena ida y vuelta, salvo que acuerdes llegar por tu cuenta.', en: 'Yes, the package includes round-trip CABA-Magdalena transfer unless you arrange to arrive on your own.' },
-  faq_q5: { es: '¿Necesito experiencia previa con caballos?', en: 'Do I need previous horse-riding experience?' },
-  faq_a5: { es: 'No. La actividad está pensada para principiantes y se realiza acompañada por guías.', en: 'No. The activity is beginner-friendly and guided throughout.' },
+  faq_a4: { es: 'Ofrecemos traslado ida y vuelta como opción. Si venís por tu cuenta, lo coordinamos y evitás pagar ese servicio.', en: 'We offer round-trip transfer as an option. If you arrive on your own, we coordinate it and you avoid paying for that service.' },
+  faq_q5: { es: '¿Necesito experiencia previa con caballos?', en: 'Do I need previous experience with horses?' },
+  faq_a5: { es: 'No. No es una cabalgata: la actividad a caballo es para fotos y, como máximo, unos pasos guiados dentro del predio.', en: 'No. This is not a trail ride: the horse activity is for photos and, at most, a few guided steps within the grounds.' },
   faq_q6: { es: '¿Puedo participar si no quiero montar a caballo?', en: 'Can I join if I do not want to ride?' },
-  faq_a6: { es: 'Sí. Podés mirar, sacar fotos y sumarte al resto de las actividades; avisá al reservar para organizar una alternativa.', en: 'Yes. You can watch, take photos, and join the rest of the activities; let us know when booking so we can arrange an alternative.' },
-  faq_q7: { es: '¿La cabalgata es segura para niños?', en: 'Is horseback riding safe for children?' },
+  faq_a6: { es: 'Sí. Podés mirar, sacarte fotos junto al caballo y sumarte al resto de las actividades.', en: 'Yes. You can watch, take photos beside the horse, and join the rest of the activities.' },
+  faq_q7: { es: '¿La actividad con caballos es segura para niños?', en: 'Is the horse activity safe for children?' },
   faq_a7: { es: 'Sí, se adapta a la edad y al criterio del equipo. Los menores participan acompañados y con supervisión.', en: 'Yes, it is adapted by age and staff judgment. Children participate accompanied and supervised.' },
   faq_q8: { es: '¿Es apto para adultos mayores?', en: 'Is it suitable for older adults?' },
   faq_a8: { es: 'Sí, si pueden pasar un día al aire libre. Recomendamos avisar cualquier necesidad de movilidad, rodilla o espalda.', en: 'Yes, if they are comfortable spending a day outdoors. Please mention mobility, knee, or back needs in advance.' },
   faq_q9: { es: '¿Es accesible para silla de ruedas?', en: 'Is it wheelchair accessible?' },
-  faq_a9: { es: 'El campo tiene terreno irregular. Consultanos antes de reservar para evaluar asistencia y recorrido posible.', en: 'The countryside has uneven ground. Please ask before booking so we can evaluate assistance and possible routes.' },
+  faq_a9: { es: 'El predio tiene terreno irregular. Consultanos antes de reservar para evaluar asistencia y recorrido posible.', en: 'The grounds have uneven terrain. Please ask before booking so we can evaluate assistance and possible routes.' },
   faq_q10: { es: '¿Qué ropa conviene llevar?', en: 'What should I wear?' },
   faq_a10: { es: 'Ropa cómoda que pueda ensuciarse, abrigo liviano por si refresca y calzado cerrado.', en: 'Wear comfortable clothes that can get dusty, a light layer in case it cools down, and closed-toe shoes.' },
   faq_q11: { es: '¿Hace falta llevar protector solar o repelente?', en: 'Should I bring sunscreen or insect repellent?' },

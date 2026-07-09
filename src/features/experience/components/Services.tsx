@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import tradicionImg from '../../../../frontend/assets/tradicion.png';
 import montandoImg from '../../../../frontend/assets/montando.jpg';
 import asadoImg from '../../../../frontend/assets/asado-gaucho.png';
+import mateImg from '../../../../frontend/assets/mate.png';
+import boinaImg from '../../../../frontend/assets/boina.jpg';
 import { useLanguage } from '../../../core/i18n/LanguageContext';
 
 const ServicesWrapper = styled.section`
@@ -52,8 +54,12 @@ const Grid = styled.div`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: ${({ theme }) => theme.spacing[10]};
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 `;
 
@@ -116,6 +122,41 @@ const CardText = styled.p`
   }
 `;
 
+const serviceCards = [
+  {
+    titleKey: 'service_tradition_title',
+    descKey: 'service_tradition_desc',
+    image: tradicionImg,
+  },
+  {
+    titleKey: 'service_asado_title',
+    descKey: 'service_asado_desc',
+    image: asadoImg,
+  },
+  {
+    titleKey: 'service_folklore_title',
+    descKey: 'service_folklore_desc',
+    image: mateImg,
+  },
+  {
+    titleKey: 'service_dress_title',
+    descKey: 'service_dress_desc',
+    image: boinaImg,
+  },
+  {
+    titleKey: 'service_skills_title',
+    descKey: 'service_skills_desc',
+    image: montandoImg,
+    bgPosition: 'center 20%',
+  },
+  {
+    titleKey: 'service_media_title',
+    descKey: 'service_media_desc',
+    image: montandoImg,
+    bgPosition: 'center 20%',
+  },
+];
+
 export const Services: React.FC = () => {
   const { t } = useLanguage();
   
@@ -127,26 +168,14 @@ export const Services: React.FC = () => {
       </SectionHeader>
       
       <Grid>
-        <Card $bgImage={tradicionImg}>
-          <CardContent>
-            <CardTitle>{t('service_tradition_title')}</CardTitle>
-            <CardText>{t('service_tradition_desc')}</CardText>
-          </CardContent>
-        </Card>
-        
-        <Card $bgImage={montandoImg} $bgPosition="center 20%">
-          <CardContent>
-            <CardTitle>{t('service_horse_title')}</CardTitle>
-            <CardText>{t('service_horse_desc')}</CardText>
-          </CardContent>
-        </Card>
-        
-        <Card $bgImage={asadoImg}>
-          <CardContent>
-            <CardTitle>{t('service_asado_title')}</CardTitle>
-            <CardText>{t('service_asado_desc')}</CardText>
-          </CardContent>
-        </Card>
+        {serviceCards.map((card) => (
+          <Card key={card.titleKey} $bgImage={card.image} $bgPosition={card.bgPosition}>
+            <CardContent>
+              <CardTitle>{t(card.titleKey)}</CardTitle>
+              <CardText>{t(card.descKey)}</CardText>
+            </CardContent>
+          </Card>
+        ))}
       </Grid>
     </ServicesWrapper>
   );
